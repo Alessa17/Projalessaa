@@ -63,8 +63,9 @@ button:hover {
 }
 .gif-fora  {
 /*     position: absolute; /*permitir posicionar em qualquer lugar da tela*/
-    top: 20px;/*ajustar tamanho*/
-    right: 20px;
-    width: 1000px
+    top: 0px;/*ajustar tamanho*/
+    left:50%
+        transform: translareX(-50%)
+    width: 100px
     height: auto;
     }
