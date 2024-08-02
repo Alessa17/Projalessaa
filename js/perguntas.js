@@ -3,7 +3,7 @@ export const perguntas = [
         // enunciado: "Ao pensar em campo literário, o que você defende?",
         alternativas: [
             {
-                texto: "Defendo que os melhores livros são os de períodos históricos, pois apresentam grande valores para a sociedade atual!!",
+                texto: "Defendo que os melhores livros são os de períodos históricos, pois apresentam grande valores para a sociedade atual!",
                 afirmacao: [
                     "No início ficou com medo do que essa tecnologia pode fazer.",
                     "Achou assustador pensar na velocidade na qual a tecnologia está avançando."
