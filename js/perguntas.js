@@ -24,7 +24,7 @@ export const perguntas = [
         enunciado: "Ler livros assim podem refletir no seu estilo literário, ao se deparar com uma injustiça qual sua reação?",
         alternativas: [
             {
-                texto: "Odeio injustiça,logo gosto de intervir! ",
+                texto: "Odeio injustiça,logo gosto de intervir e ler livros assim! ",
                 afirmacao: [
                     "livros.",
                     "Percebeu que a IA pode ajudar a encontrar informações úteis na internet de forma mais rápida e direcionada.",
@@ -33,7 +33,7 @@ export const perguntas = [
                 proxima: 3,
             },
             {
-                texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
+                texto: "Não gosto de injustiça, logo prefiro me manter distante de livros que aborda esse tema! .",
                 afirmacao: [
                     "Sentiu mais facilidade em utilizar seus próprios recursos para escrever seu trabalho.",
                     "Achou que era muito mais fácil procurar por respostas utilizando alguns meios mais tradicionais mesmo que levasse mais tempo.",
