@@ -24,9 +24,9 @@ export const perguntas = [
         enunciado: "Ler livros assim podem refletir no seu estilo literário, ao se deparar com uma injustiça qual sua reação?",
         alternativas: [
             {
-                texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
+                texto: "Odeio injustiça,logo gosto de intervir! ",
                 afirmacao: [
-                    "Conseguiu utilizar a IA para buscar informações úteis.",
+                    "livros.",
                     "Percebeu que a IA pode ajudar a encontrar informações úteis na internet de forma mais rápida e direcionada.",
                     "Percebeu que a IA consegue explicar termos complicados de forma simplificada e isso ajudou muito suas pesquisas sobre assuntos complexos."
                 ],
