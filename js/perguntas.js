@@ -1,9 +1,9 @@
 export const perguntas = [
     {
-        // enunciado: "Ao pensar em campo literário, o que você defende?",
+        // enunciado: "Qual tipo de livro você prefere?",
         alternativas: [
             {
-                texto: "Defendo que os melhores livros são os de períodos históricos, pois apresentam grandes valores para sociedade atual.",
+                texto: "Livros de ficção que permitem escapar da realidade.",
                 afirmacao: [
                     "No início ficou com medo do que essa tecnologia pode fazer.",
                     "Achou assustador pensar na velocidade na qual a tecnologia está avançando."
@@ -11,7 +11,7 @@ export const perguntas = [
                 proxima: 1,
             },
             {
-                texto: "Defendo que os melhores livros são os de ficção, pois fogem da realidade!",
+                texto: "Livros históricos que apresentam grandes valores para a sociedade atual.",
                 afirmacao: [
                     "Quis saber como usar IA no seu dia a dia.",
                     "Pensou que IA pode ajudar em tarefas da sua vida."
@@ -21,10 +21,10 @@ export const perguntas = [
         ]
     },
     {
-        enunciado: "Ler livros assim podem refletir no seu estilo literário, ao se deparar com uma injustiça qual sua reação?",
+        enunciado: "Qual tema mais te interessa em um livro?",
         alternativas: [
             {
-                texto: "Odeio injustiça,logo gosto de intervir e ler livros assim! ",
+                texto: "fantasia e aventura",
                 afirmacao: [
                     "livros.",
                     "Percebeu que a IA pode ajudar a encontrar informações úteis na internet de forma mais rápida e direcionada.",
@@ -33,7 +33,7 @@ export const perguntas = [
                 proxima: 3,
             },
             {
-                texto: "Não gosto de injustiça, logo prefiro me manter distante de livros que aborda esse tema! .",
+                texto: " História e biografia.",
                 afirmacao: [
                     "Sentiu mais facilidade em utilizar seus próprios recursos para escrever seu trabalho.",
                     "Achou que era muito mais fácil procurar por respostas utilizando alguns meios mais tradicionais mesmo que levasse mais tempo.",
@@ -109,7 +109,7 @@ export const perguntas = [
         ]
     },
     {
-        enunciado: "Novas tecnologias trazem novos desafios, por isso após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: " Qual formato de livro você prefere?",
         alternativas: [
             {
                 texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
@@ -133,7 +133,7 @@ export const perguntas = [
         enunciado: "É muito importante refletir sobre os trabalhadores do futuro. Por isso a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
         alternativas: [
             {
-                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
+                texto: "Livros físicos.",
                 afirmacao: [
                     "Vem impulsionando a inovação na área de IA e luta para abrir novos caminhos profissionais com IA.",
                     "Participa ativamente do desenvolvimento de soluções criativas e na melhoria de processos em IA."
@@ -141,7 +141,7 @@ export const perguntas = [
                 proxima: 7,
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
+                texto: "E-books ou audiobooks.",
                 afirmacao: [
                     "Sua preocupação com as pessoas motivou a criar um grupo de estudos entre trabalhadores para discutir meios de utilização de IA de forma ética.",
                     "Criou grupos de ética voltado para IA e busca ativamente reduzir as desigualdades geradas pela automação."
