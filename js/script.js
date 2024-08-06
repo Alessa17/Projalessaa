@@ -1,28 +1,27 @@
 import { aleatorio, nome } from './aleatorio.js';
 import { perguntas } from './perguntas.js';
 
-const caixaPrincipal = document.querySelector('.caixa-principal');
-const caixaPerguntas = document.querySelector('.caixa-perguntas');
-const caixaAlternativas = document.querySelector('.caixa-alternativas');
-const caixaResultado = document.querySelector('.caixa-resultado');
-const textoResultado = document.querySelector('.texto-resultado');
-const botaoJogarNovamente = document.querySelector('.botao-jogar-novamente');
-const botaoIniciar = document.querySelector('.botao-iniciar');
-const telaInicial = document.querySelector('.tela-inicial');
+const caixaPrincipal = document.querySelector(".caixa-principal");
+const caixaPerguntas = document.querySelector(".caixa-perguntas");
+const caixaAlternativas = document.querySelector(".caixa-alternativas");
+const caixaResultado = document.querySelector(".caixa-resultado");
+const textoResultado = document.querySelector(".texto-resultado");
+const botaoJogarNovamente = document.querySelector(".novamente-btn");
+const botaoIniciar = document.querySelector(".iniciar-btn");
+const telaInicial = document.querySelector(".tela-inicial");
 
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
 botaoIniciar.addEventListener('click', iniciaJogo);
-botaoJogarNovamente.addEventListener('click', iniciaJogo);
 
 function iniciaJogo() {
     atual = 0;
     historiaFinal = "";
     telaInicial.style.display = 'none';
-    caixaPerguntas.classList.add("mostrar");
-    caixaAlternativas.classList.add("mostrar");
+    caixaPerguntas.classList.remove("mostrar");
+    caixaAlternativas.classList.remove("mostrar");
     caixaResultado.classList.remove("mostrar");
     mostraPergunta();
 }
@@ -32,7 +31,6 @@ function mostraPergunta() {
         mostraResultado();
         return;
     }
-
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent = "";
@@ -40,18 +38,45 @@ function mostraPergunta() {
 }
 
 function mostraAlternativas() {
-    perguntaAtual.alternativas.forEach((alternativa, index) => {
-        const botao = document.createElement('button');
-        botao.textContent = alternativa;
-        botao.addEventListener('click', () => verificarResposta(index));
-        caixaAlternativas.appendChild(botao);
-    });
+    for (const alternativa of perguntaAtual.alternativas) {
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
+        caixaAlternativas.appendChild(botaoAlternativas);
+    }
 }
 
-function verificarResposta(index) {
-    // Lógica para verificar a resposta selecionada
+function respostaSelecionada(opcaoSelecionada) {
+    const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
+    historiaFinal += afirmacoes + " ";
+    if (opcaoSelecionada.proxima !== undefined) {
+        atual = opcaoSelecionada.proxima;
+    } else {
+        mostraResultado();
+        return;
+    }
+    mostraPergunta();
 }
 
 function mostraResultado() {
-    // Lógica para mostrar o resultado final
+    caixaPerguntas.textContent = `Em 2049, ${nome}`;
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+    caixaResultado.classList.add("mostrar");
+    botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
+
+function jogaNovamente() {
+    atual = 0;
+    historiaFinal = "";
+    caixaResultado.classList.remove("mostrar");
+    mostraPergunta();
+}
+
+function substituiNome() {
+    for (const pergunta of perguntas) {
+        pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
+    }
+}
+
+substituiNome();
